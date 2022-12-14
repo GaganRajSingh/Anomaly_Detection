@@ -98,8 +98,8 @@ class C3D(nn.Module):
             for layer, type_ in itertools.product(["fc7", "fc8"], ["bias", "weight"])
         ]
 
-        # p_dict = torch.load(self.pretrained)
-        p_dict = torch.load(self.pretrained, map_location=torch.device('cpu'))   # use this if working with CPU
+        p_dict = torch.load(self.pretrained)
+        # p_dict = torch.load(self.pretrained, map_location=torch.device('cpu'))   # use this if working with CPU
         s_dict = self.state_dict()
         for name in p_dict:
             if name not in corresp_name:
