@@ -2,17 +2,23 @@
 import cv2
 import os
 from os import path
-video_name = 'Robbery032_x264.mp4'
-vidcap = cv2.VideoCapture('input_video/' + video_name)
+
+input_video_folder = 'input_video'
+video_names = [video for video in os.listdir(input_video_folder)]
+
+vidcap = cv2.VideoCapture(os.path.join(input_video_folder, video_names[0]))
 success,image = vidcap.read()
-count = 0
+
 
 input_frames_folder = 'input_frames'
 if not path.exists(input_frames_folder):
     os.mkdir(input_frames_folder)
 
+count = 0
 while success:
-    cv2.imwrite(input_frames_folder + "/frame%d.jpg" % count, image)     
+    n = len(str(count))
+    suffix = '0'*(7-n) + str(count)
+    cv2.imwrite(input_frames_folder + "/frame%s.jpg" % suffix, image)     
     success,image = vidcap.read()
     count += 1
     print(count)
