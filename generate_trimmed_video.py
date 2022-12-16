@@ -4,7 +4,7 @@ import cv2
 import os
 import numpy as np
 bayesian_frames_folder = 'bayesian_output/video1'
-input_frames_folder = 'input_frames'
+input_frames_folder = 'input_data/video1/input'
 
 trimmed_video_folder = 'trimmed_video'
 
