@@ -19,7 +19,7 @@ We have provided a fully fledged code and we need to run below steps in order to
 
 Step1. First we need to run `extract_frames_ft.py` and after this we get input frames and their corresponding ground truth franes which will save to Input_data/video1. 
 
-Step2. Then we run `adnn_detect_work.py` ADNNet (Arithmetic Distribution Neural Network) for background subtraction provided a pre-trained model which is trained with less than 1\% of ground truth frames from the CDNet2014 dataset and save the output frames in adnn_output folder. 
+Step2. Then we run `adnn_detect_work.py` to generate the binary foreground mask for each frame in the video. These masks are stored in the folder adnn_output.
 
 Step3. Then we run `bayesian_refine_work.py` and will save our final refined frames in the bayesian_output folder.  
 
