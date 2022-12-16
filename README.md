@@ -4,13 +4,11 @@
 ## Abstract
 Object movement identification is one of the most researched problems in the field of computer vision. In this task, we try to classify a pixel as foreground or background. Even though numerous traditional machine learning and deep learning methods already exist for this problem, the two major issues with most of them are the need for large amounts of ground truth data and their inferior performance on unseen videos. Since every pixel of every frame has to be labeled, acquiring large amounts of data for these techniques gets rather expensive. Recently,  Zhao et al. proposed one of a kind Arithmetic Distribution Neural Network (ADNN) for universal background subtraction which utilizes probability information from the histogram of temporal pixels and achieves promising results. Building onto this work, we propose an intelligent video surveillance system that will use ADNN architecture for motion detection with some additional features like anomaly detection built within it.
 
-## AnomalyDetectionCVPR2018-Pytorch
-* C3D feature extraction
+## Feature extractor model setup
 
-## 
-C3D Weights
 C3D weights can be found here: https://drive.google.com/drive/folders/1VIuJwUUGR_msOnbSXm8das2eVCN3uW0N?usp=sharing
-Create a folder "pretrained" and paste the cr3.pickle file inside that folder
+
+Create a folder "pretrained" and paste the c3d.pickle file inside that folder.
 
 ## Pre-Trained Anomaly Detector
 Check out <a href="exps/c3d/">exps/</a> for trained models on the pre-computed features
