@@ -19,13 +19,13 @@ We have provided a fully fledged code and we need to run below steps in order to
 
 Step1. First we need to run `extract_frames_ft.py` and after this we get input frames and their corresponding ground truth franes which will save to Input_data/video1. 
 
-Step2. Then we run `adnn_detect_work.py` to generate the binary foreground mask for each frame in the video. These masks are stored in the folder adnn_output.
+Step2. Then we run `adnn_detect_work.py` to generate the binary foreground mask for each frame in the video. These masks are stored in the folder adnn_output. The output of this step is already computed.
 
-Step3. Then we run `bayesian_refine_work.py` and will save our final refined frames in the bayesian_output folder.  
+Step3. Then we run `bayesian_refine_work.py` and will save our final refined frames in the bayesian_output folder. The output of this step is already computed.
 
-Step4. To extract trimmed video we run `generate_trimmed_video.py`. This will save trimmed video in new folder named 'trimmed_video'. We have set different threhold values, depending on the input video. It will provide us the trimmed input video containing input frames having some motion in it and exclude frames which are still and not having any motion. By extracting trimmed video we are saving lot of time in anomaly detection. 
+Step4. To extract trimmed video we run `generate_trimmed_video.py`. This will save trimmed video in new folder named 'trimmed_video'. We have set different threhold values, depending on the input video. It will provide us the trimmed input video containing input frames having some motion in it and exclude frames which are still and not having any motion. By extracting trimmed video we are saving lot of time in anomaly detection.
 
-Step5. In this step we are extracting the C3D features of our trimmed video. For that we need to run `feature_extractor.py` and this will save the features in feature_output folder. You can have a look into this folder and find the .txt file containing the features of the trimmed video. We use this feature to find the anomaly score which is our final step. 
+Step5. In this step we are extracting the C3D features of our trimmed video. For that we need to run `feature_extractor.py` and this will save the features in feature_output folder. You can have a look into this folder and find the .txt file containing the features of the trimmed video. We use this feature to find the anomaly score which is our final step. The output of this step is already computed.
 
 Step6. Finally, we have extracted features from trimmed video and we use these features to find the anomaly score. We run `generate_anomaly_score.py` and it will save the graph of anomaly scores in anomaly_score folder. 
 
