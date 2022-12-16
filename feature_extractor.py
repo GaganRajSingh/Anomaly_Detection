@@ -37,7 +37,7 @@ def get_args() -> argparse.Namespace:
     parser.add_argument(
         "--num_workers",
         type=int,
-        default=32,
+        default=32,         # change this according to the system
         help="define the number of workers used for loading the videos",
     )
     parser.add_argument(
@@ -82,9 +82,7 @@ def get_args() -> argparse.Namespace:
 def to_segments(
     data: Union[Tensor, np.ndarray], n_segments: int = 32
 ) -> List[np.array]:
-    """These code is taken from:
-        # https://github.com/rajanjitenpatel/C3D_feature_extraction/blob/b5894fa06d43aa62b3b64e85b07feb0853e7011a/extract_C3D_feature.py#L805
-
+    """
     Args:
         data (Union[Tensor, np.ndarray]): List of features of a certain video
         n_segments (int, optional): Number of segments
