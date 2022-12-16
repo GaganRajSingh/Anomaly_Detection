@@ -30,4 +30,11 @@ Step5. In this step we are extracting the C3D features of our trimmed video. For
 Step6. Finally, we have extracted features from trimmed video and we use these features to find the anomaly score. We run `generate_anomaly_score.py` and it will save the graph of anomaly scores in anomaly_score folder. 
 
         
-By just following above steps we will get results. To summerize, we first have an input video and find the binary mask of each input video frame with help of ADNN and then we use bayesian refinement to refine the binary masks obtained in previous step. Then we use refined frames from bayesian refine in order to get trimmed video with the help of thresholding technique. Then we find features of trimmed input video and finally we calculate anomaly scores with the help of these features. 
+By just following above steps we will get results. To summerize, we first have an input video and find the binary mask of each input video frame with help of ADNN and then we use bayesian refinement to refine the binary masks obtained in previous step. Then we use refined frames from bayesian refine in order to get trimmed video with the help of thresholding technique. Then we find features of trimmed input video and finally we calculate anomaly scores with the help of these features.
+
+## Reference
+
+The below code repositories were referred for implementation of this project:
+
+1. https://github.com/zhaochenqiu/UBgS_ADNNet
+2. https://github.com/ekosman/AnomalyDetectionCVPR2018-Pytorch
